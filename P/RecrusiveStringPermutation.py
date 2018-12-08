@@ -1,26 +1,24 @@
-#O(N*N!)
-def recursivePermutations(str):
-    if len(str) <= 1:
-        return set([str])
-
-    lastChar = str[-1]
-    allMinusLast = str[:-1]
-
-    allMinusLastPermutations = recursivePermutations(allMinusLast)
-
-    perms = set()
-
-    for permutations in allMinusLastPermutations:
-        for i in range(len(allMinusLast) + 1):
-            permutation = (
-                permutations[:i]
-                + lastChar
-                + permutations[i:]
-            )
-            perms.add(permutation)
-
-    return perms
+# O(N*N!)
 
 
-x = recursivePermutations("asdf")
+def getPermutations(s):
+    if len(s) <= 1:
+        return set([s])
+
+    last = s[-1]
+    restofLetters = s[:-1]
+
+    lettersMinusLast = getPermutations(restofLetters)
+
+    permutations = set()
+
+    for permutation in lettersMinusLast:
+        for i in range(len(permutation) + 1):
+            p = permutation[:i] + last + permutation[i:]
+            permutations.add(p)
+
+    return permutations
+
+
+x = getPermutations("asdf")
 print(x)
