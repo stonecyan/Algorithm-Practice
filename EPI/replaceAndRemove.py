@@ -25,3 +25,4 @@ def replaceAndRemove(size,string):
 
 x=replaceAndRemove(4,["a","c", "d", "b", "b", "c", "a"])
 print(x)
+
