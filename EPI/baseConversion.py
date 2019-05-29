@@ -27,3 +27,4 @@ def baseConversion(number, b1, b2):
 
 x = baseConversion("13346", 10, 7)
 print(x)
+
