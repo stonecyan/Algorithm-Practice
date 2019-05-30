@@ -21,3 +21,4 @@ x = [0,1,2,0,2,1,1]
 pivot = 1
 y=dutchFlagPartition(x,pivot)
 print(y)
+
