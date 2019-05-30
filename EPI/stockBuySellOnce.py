@@ -12,3 +12,4 @@ def stockBuySellOnce(prices):
 x = [310, 315, 275, 295, 260, 270, 290, 230, 255, 250]
 y = stockBuySellOnce(x)
 print(y)
+
