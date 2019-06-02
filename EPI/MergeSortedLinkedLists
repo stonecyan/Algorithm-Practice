@@ -1,0 +1,47 @@
+class Node:    
+  def __init__(self, value, nextNode=None):        
+    self.value = value        
+    self.nextNode = nextNode
+class LinkedList:
+    def __init__(self):
+        self.headval = None
+    def printlist(self):
+        printval = self.headval
+        while printval is not None:
+            print (printval.value)
+            printval = printval.nextNode
+        
+
+def mergeSortedLinkedLists(l1, l2):
+  mergedList = LinkedList()
+  head = tail = Node("d")
+  mergedList.headval = head
+  while l1 and l2:
+    if l1.value<l2.value:
+      tail.nextNode = l1
+      l1 = l1.nextNode
+    else:
+      tail.nextNode = l2
+      l2 = l2.nextNode
+    tail = tail.nextNode
+  tail.nextNode = l1 or l2
+  mergedList.headval = head.nextNode
+  return mergedList
+      
+
+l1 = LinkedList()
+node1 = Node(2)
+node2 = Node(5)
+node3 = Node(7)
+node1.nextNode = node2
+node2.nextNode = node3
+l1.headval = node1
+
+l2 = LinkedList()
+n1 = Node(3)
+n2 = Node(11)
+n1.nextNode = n2
+l2.headval = n1
+
+x = mergeSortedLinkedLists(node1, n1)
+x.printlist()

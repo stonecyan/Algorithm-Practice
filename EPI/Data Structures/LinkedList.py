@@ -1,3 +1,17 @@
+class Node:    
+  def __init__(self, value, nextNode=None):        
+    self.value = value        
+    self.nextNode = nextNode
+class LinkedList:
+    def __init__(self):
+        self.headval = None
+    def printlist(self):
+        printval = self.headval
+        while printval is not None:
+            print (printval.value)
+            printval = printval.nextNode
+
+
 class Node(object):
     def __init__(self, data=None, next_node=None):
         self.data = None
