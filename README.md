@@ -9,3 +9,4 @@ https://angel.co/company/kamps-io/jobs/579978-junior-software-developer
 https://jobs.lever.co/nylas/
 https://bubble.is/job?jid=4377554002
 https://teachable.com/careers
+https://angel.co/company/bite-kiosk/jobs/602185-full-stack-software-engineer
